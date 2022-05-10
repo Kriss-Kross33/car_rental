@@ -24,6 +24,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^1.0.4
 
 
 flutter:
@@ -41,6 +42,10 @@ flutter:
   fonts:
     - family: Saira
       fonts:
+        - asset: assets/fonts/Saira_Expanded-ExtraBold.ttf
+          weight: 900
+        - asset: assets/fonts/SairaCondensed-Black.ttf
+          weight: 900
         - asset: assets/fonts/SairaCondensed-ExtraBold.ttf
           weight: 900
         - asset: assets/fonts/SairaCondensed-Bold.ttf
