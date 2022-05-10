@@ -1,3 +1,4 @@
+import 'package:car_rental/src/core/constants/asset_consts.dart';
 import 'package:car_rental/src/core/models/car_model.dart';
 import 'package:car_rental/src/core/service_locator/service_locator.dart';
 import 'package:car_rental/src/features/home/common/widgets.dart';
@@ -39,9 +40,9 @@ class _CarPageViewWidgetState extends State<CarPageViewWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           ResponsiveContainer(
-            phoneSize: Size(380, 230),
-            tabletSize: Size(750, 350),
-            desktopSize: Size(750, 350),
+            phoneSize: const Size(380, 230),
+            tabletSize: const Size(750, 350),
+            desktopSize: const Size(750, 370),
             child: Center(
               child: PageView.builder(
                 // physics: NeverScrollableScrollPhysics(),
@@ -63,6 +64,9 @@ class _CarPageViewWidgetState extends State<CarPageViewWidget> {
               ),
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -73,15 +77,18 @@ class _CarPageViewWidgetState extends State<CarPageViewWidget> {
                   //       .onPreviousPressed(_controller.page!.toInt());
                   // }
                   _controller.previousPage(
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn);
                 },
-                icon: Icon(
-                  Icons.arrow_back,
-                  size: 20,
+                icon: Image.asset(
+                  AssetConsts.left_arrow,
+                  width: 100,
+                  height: 20,
+                  fit: BoxFit.fill,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 25,
               ),
               IconButton(
@@ -90,12 +97,15 @@ class _CarPageViewWidgetState extends State<CarPageViewWidget> {
                   //   _carShowcaseCubit.onNextPressed(_controller.page!.toInt());
                   // }
                   _controller.nextPage(
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn);
                 },
-                icon: Icon(
-                  Icons.arrow_forward,
-                  size: 20,
+                icon: Image.asset(
+                  AssetConsts.right_arrow,
+                  width: 100,
+                  height: 20,
+                  fit: BoxFit.fill,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ],
