@@ -1,5 +1,7 @@
 import 'package:car_rental/src/core/service_locator/service_locator.dart';
 import 'package:car_rental/src/features/about_us/about_us_screen.dart';
+import 'package:car_rental/src/features/cars/cars_screen.dart';
+import 'package:car_rental/src/features/contact/contact_screen.dart';
 import 'package:car_rental/src/features/home/home.dart';
 import 'package:car_rental/src/features/main/cubit/nav_item_cubit/nav_item_cubit.dart';
 import 'package:flutter/material.dart';
@@ -37,20 +39,16 @@ class _CustomIndexedStackedWidgetState
         builder: (context, state) {
           return IndexedStack(
             index: state.currentIndex,
-            children: [
+            children: const [
               HomeWidget(),
               AboutUsWidget(),
-              Container(
-                child: Text('2'),
-              ),
-              Container(
+              CarsScreenWidget(),
+              ContactScreen(),
+              SizedBox(
                 child: Text('4'),
               ),
-              Container(
+              SizedBox(
                 child: Text('5'),
-              ),
-              Container(
-                child: Text('6'),
               ),
             ],
           );
