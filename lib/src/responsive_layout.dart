@@ -99,14 +99,14 @@ class ResponsiveContainer extends StatelessWidget {
         child: child,
       ),
       tablet: CustomContainer(
-        width: phoneSize.width,
-        height: phoneSize.height,
+        width: tabletSize.width,
+        height: tabletSize.height,
         decoration: decoration,
         child: child,
       ),
       desktop: CustomContainer(
-        width: phoneSize.width,
-        height: phoneSize.height,
+        width: desktopSize.width,
+        height: desktopSize.height,
         decoration: decoration,
         child: child,
       ),
