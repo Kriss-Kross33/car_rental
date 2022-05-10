@@ -19,9 +19,9 @@ class CarWidget extends StatefulWidget {
 
 class _CarWidgetState extends State<CarWidget>
     with SingleTickerProviderStateMixin<CarWidget> {
-  late AnimationController _fadeAnimationController;
+  // late AnimationController _fadeAnimationController;
 
-  late Animation<double> _fadeAnimation;
+  // late Animation<double> _fadeAnimation;
 
   @override
   void initState() {
@@ -47,9 +47,9 @@ class _CarWidgetState extends State<CarWidget>
     return Column(
       children: [
         ResponsiveContainer(
-          phoneSize: Size(300, 170),
-          tabletSize: Size(650, 300),
-          desktopSize: Size(650, 300),
+          phoneSize: const Size(300, 170),
+          tabletSize: const Size(650, 300),
+          desktopSize: const Size(650, 330),
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -61,12 +61,12 @@ class _CarWidgetState extends State<CarWidget>
             ),
           ),
         ),
-        SizedBox(
-          height: 30,
+        const SizedBox(
+          height: 20,
         ),
         Text(
           widget.car.name,
-          style: Theme.of(context).textTheme.headline5?.copyWith(height: 1),
+          style: Theme.of(context).textTheme.headline4?.copyWith(height: 1),
         ),
       ],
     );

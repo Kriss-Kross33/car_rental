@@ -1,5 +1,4 @@
 import 'package:car_rental/src/core/widgets/phone_number_widget.dart';
-import 'package:car_rental/src/features/main/widgets/body_widget/body_widget.dart';
 import 'package:car_rental/src/features/main/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,7 @@ class DesktopMainWidget extends StatelessWidget {
       children: [
         Row(
           mainAxisSize: MainAxisSize.min,
-          children: [
+          children: const [
             SidebarSection(),
             Expanded(
               child: BodyWidget(),
@@ -20,8 +19,8 @@ class DesktopMainWidget extends StatelessWidget {
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 50, top: 30),
+        const Padding(
+          padding: EdgeInsets.only(left: 50, top: 30),
           child: PhoneNumberWidget(),
         ),
       ],
