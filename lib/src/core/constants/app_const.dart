@@ -18,4 +18,12 @@ class AppConst {
   static const String rentACar = 'Rent a Car';
   static const String fromPrice = 'from \$80';
   static const String phoneNumber = '+233 54 681 4337';
+  static const String reservations = 'Reservation';
+  static const String book_now = 'Book Now';
+  static const String openingHours = 'Opening Hours:';
+  static const String info = 'Info:';
+  static const String monFri = 'Mon - Fri';
+  static const String satSun = 'Sat - Sun';
+  static const String mail = 'Mail:';
+  static const String phone = 'Phone:';
 }

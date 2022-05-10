@@ -202,4 +202,5 @@ class AppColor {
   static const Color white = Colors.white;
   static const Color black = Colors.black;
   static const Color imageBgColor = Color(0xFF61B0D4);
+  static const Color deepOrange = Color(0xFFF73F1C);
 }
