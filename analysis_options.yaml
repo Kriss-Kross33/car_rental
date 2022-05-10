@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    parameter_assignments: false
+    constant_identifier_names: false
+    overridden_fields: false
+
+analyzer:
+  errors:
+    invalid_annotation_target:  ignore
+    parameter_assignments: error
