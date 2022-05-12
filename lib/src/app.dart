@@ -21,7 +21,7 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.defaultTheme,
         // darkTheme: AppTheme.darkTheme,
-        home: CarRentalMainScreen(),
+        home: const CarRentalMainScreen(),
       ),
     );
   }

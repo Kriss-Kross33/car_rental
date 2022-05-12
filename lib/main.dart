@@ -5,5 +5,5 @@ import 'src/core/service_locator/service_locator.dart';
 
 void main() {
   setupLocator();
-  runApp(App());
+  runApp(const App());
 }

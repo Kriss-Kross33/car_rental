@@ -11,7 +11,7 @@ class AboutUsWidget extends StatelessWidget {
     return ResponsiveLayout(
       phone: Container(),
       tablet: Container(),
-      desktop: AboutUsDesktop(),
+      desktop: const AboutUsDesktop(),
     );
   }
 }

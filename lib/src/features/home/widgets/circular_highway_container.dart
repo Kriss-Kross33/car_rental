@@ -11,11 +11,11 @@ class CircularHighwayContainer extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: ResponsiveLayout(
-        phone: CircularImageStack(
+        phone: const CircularImageStack(
           size: 300,
         ),
         tablet: Container(),
-        desktop: CircularImageStack(
+        desktop: const CircularImageStack(
           size: 600,
         ),
       ),
@@ -63,7 +63,7 @@ class CircularImageStack extends StatelessWidget {
                     //Theme.of(context).colorScheme.secondary,
                     // Theme.of(context).colorScheme.secondary
                   ],
-                  stops: [0.0, 1.0, 1.0],
+                  stops: const [0.0, 1.0, 1.0],
                 ),
               ),
             ),

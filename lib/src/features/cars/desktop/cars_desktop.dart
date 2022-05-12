@@ -25,18 +25,18 @@ class CarsDesktop extends StatelessWidget {
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    const HeaderWidget(
+                  children: const <Widget>[
+                    HeaderWidget(
                       text: AppConst.cars,
                       fontSize: 50,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 15,
                     ),
                     OrangeDivider(
                       width: 60,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
                     CarDetailsPageView()
@@ -105,7 +105,7 @@ class CarsDesktop extends StatelessWidget {
             children: [
               ClipRect(
                 child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
+                  colorFilter: const ColorFilter.mode(
                     AppColor.imageBgColor,
                     //Theme.of(context).colorScheme.secondary,
                     BlendMode.color,
@@ -121,7 +121,7 @@ class CarsDesktop extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 52,
                             ),
                             Align(
@@ -147,7 +147,7 @@ class CarsDesktop extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 40),
+                padding: const EdgeInsets.only(bottom: 40),
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: ClipRect(
@@ -158,7 +158,7 @@ class CarsDesktop extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
-                        minimumSize: Size(
+                        minimumSize: const Size(
                           300,
                           70,
                         ),

@@ -18,7 +18,7 @@ class AppTheme {
 
   //* Light Theme
   static ThemeData lightTheme = ThemeData(
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
       primary: whitePrimaryColor,
       primaryVariant: whitePrimaryVariant,
       onPrimary: whiteOnPrimaryColor,
@@ -110,7 +110,7 @@ class AppTheme {
 
   static ThemeData darkTheme = ThemeData(
     scaffoldBackgroundColor: darkPrimaryColor,
-    colorScheme: ColorScheme.dark(
+    colorScheme: const ColorScheme.dark(
       primary: darkPrimaryColor,
       primaryVariant: darkPrimaryVariant,
       onPrimary: darkOnPrimaryColor,
@@ -182,13 +182,13 @@ class AppTheme {
 
   //* Icon Theme
   static const Color iconColor = Color(0xFFF96E57);
-  static IconThemeData _iconTheme = IconThemeData(
+  static const IconThemeData _iconTheme = IconThemeData(
     color: iconColor,
   );
 
   //* Button Theme
   static const Color buttonColor = Color(0xFFF73E1B);
-  static ButtonThemeData _buttonThemeData = ButtonThemeData(
+  static const ButtonThemeData _buttonThemeData = ButtonThemeData(
     colorScheme: ColorScheme.light(
       primary: buttonColor,
     ),

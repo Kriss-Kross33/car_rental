@@ -25,18 +25,18 @@ class ContactDesktop extends StatelessWidget {
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    const HeaderWidget(
+                  children: const <Widget>[
+                    HeaderWidget(
                       text: AppConst.contact,
                       fontSize: 50,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 15,
                     ),
                     OrangeDivider(
                       width: 60,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
                     ContactListWidget()
@@ -50,7 +50,7 @@ class ContactDesktop extends StatelessWidget {
           flex: 3,
           child: ClipRect(
             child: ColorFiltered(
-              colorFilter: ColorFilter.mode(
+              colorFilter: const ColorFilter.mode(
                 AppColor.imageBgColor,
                 //Theme.of(context).colorScheme.secondary,
                 BlendMode.color,

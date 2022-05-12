@@ -34,7 +34,7 @@ class ContactItem extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  OrangeDivider(
+                  const OrangeDivider(
                     thickness: 3.0,
                     width: 50,
                   ),
@@ -44,7 +44,7 @@ class ContactItem extends StatelessWidget {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(AppConst.monFri),
+                      const Text(AppConst.monFri),
                       const SizedBox(
                         width: 15,
                       ),
@@ -57,7 +57,7 @@ class ContactItem extends StatelessWidget {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(AppConst.satSun),
+                      const Text(AppConst.satSun),
                       const SizedBox(
                         width: 15,
                       ),
@@ -66,7 +66,7 @@ class ContactItem extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 150,
               ),
               Column(
@@ -81,7 +81,7 @@ class ContactItem extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  OrangeDivider(
+                  const OrangeDivider(
                     thickness: 3.0,
                     width: 50,
                   ),
@@ -91,7 +91,7 @@ class ContactItem extends StatelessWidget {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(AppConst.phone),
+                      const Text(AppConst.phone),
                       const SizedBox(
                         width: 15,
                       ),
@@ -104,7 +104,7 @@ class ContactItem extends StatelessWidget {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(AppConst.mail),
+                      const Text(AppConst.mail),
                       const SizedBox(
                         width: 15,
                       ),

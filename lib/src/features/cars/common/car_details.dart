@@ -19,9 +19,9 @@ class CarDetailsWidet extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         ResponsiveContainer(
-          phoneSize: Size(300, 170),
-          tabletSize: Size(650, 300),
-          desktopSize: Size(750, 330),
+          phoneSize: const Size(300, 170),
+          tabletSize: const Size(650, 300),
+          desktopSize: const Size(750, 330),
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(

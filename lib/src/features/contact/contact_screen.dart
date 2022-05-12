@@ -11,7 +11,7 @@ class ContactScreen extends StatelessWidget {
     return ResponsiveLayout(
       phone: Container(),
       tablet: Container(),
-      desktop: ContactDesktop(),
+      desktop: const ContactDesktop(),
     );
   }
 }

@@ -8,9 +8,9 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
-      phone: HomePhone(),
+      phone: const HomePhone(),
       tablet: Container(),
-      desktop: HomeDesktop(),
+      desktop: const HomeDesktop(),
     );
   }
 }

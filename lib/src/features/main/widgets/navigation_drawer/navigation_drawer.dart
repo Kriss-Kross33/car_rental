@@ -10,7 +10,7 @@ class NavigationDrawer extends StatelessWidget {
       width: 250,
       color: Theme.of(context).colorScheme.primary,
       child: Column(
-        children: [
+        children: const [
           Flexible(
             child: SideBar(),
           ),

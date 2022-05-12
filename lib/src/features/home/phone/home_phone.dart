@@ -46,10 +46,10 @@ class HomePhone extends StatelessWidget {
                                     height: 1,
                                   ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        OrangeDivider(
+                        const OrangeDivider(
                           width: 40,
                         ),
                       ],
@@ -62,7 +62,7 @@ class HomePhone extends StatelessWidget {
               flex: 1,
               child: ClipRect(
                 child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
+                  colorFilter: const ColorFilter.mode(
                     AppColor.imageBgColor,
                     //Theme.of(context).colorScheme.secondary,
                     BlendMode.color,
@@ -82,13 +82,13 @@ class HomePhone extends StatelessWidget {
           ],
         ),
         const CircularHighwayContainer(),
-        ResponsivePadding(
-          phonePadding: const EdgeInsets.only(top: 400),
-          tabletPadding: const EdgeInsets.only(top: 300, right: 200),
-          destopPadding: const EdgeInsets.only(top: 300, right: 200),
+        const ResponsivePadding(
+          phonePadding: EdgeInsets.only(top: 400),
+          tabletPadding: EdgeInsets.only(top: 300, right: 200),
+          destopPadding: EdgeInsets.only(top: 300, right: 200),
           child: Align(
             alignment: Alignment.centerRight,
-            child: const CarPageViewWidget(),
+            child: CarPageViewWidget(),
           ),
         ),
       ],

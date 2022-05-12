@@ -14,7 +14,7 @@ class PhoneNumberWidget extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Icon(
+          const Icon(
             Icons.call,
           ),
           const SizedBox(

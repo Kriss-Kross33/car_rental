@@ -25,24 +25,24 @@ class AboutUsDesktop extends StatelessWidget {
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    const HeaderWidget(
+                  children: const <Widget>[
+                    HeaderWidget(
                       text: AppConst.about,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 15,
                     ),
-                    const SubHeaderWidget(text: AppConst.aboutUsSubHeader),
-                    const SizedBox(
+                    SubHeaderWidget(text: AppConst.aboutUsSubHeader),
+                    SizedBox(
                       height: 20,
                     ),
                     OrangeDivider(
                       width: 60,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
-                    const AboutUsDescriptionText(),
+                    AboutUsDescriptionText(),
                   ],
                 ),
                 Align(
@@ -89,7 +89,7 @@ class AboutUsDesktop extends StatelessWidget {
           flex: 3,
           child: ClipRect(
             child: ColorFiltered(
-              colorFilter: ColorFilter.mode(
+              colorFilter: const ColorFilter.mode(
                 AppColor.imageBgColor,
                 //Theme.of(context).colorScheme.secondary,
                 BlendMode.color,

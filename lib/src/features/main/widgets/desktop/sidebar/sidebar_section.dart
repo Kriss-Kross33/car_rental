@@ -8,7 +8,7 @@ class SidebarSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: EdgeInsets.only(top: 150, bottom: 10),
+        padding: const EdgeInsets.only(top: 150, bottom: 10),
         child: Container(
           child: Row(
             children: [

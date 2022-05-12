@@ -40,9 +40,9 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
         mainAxisSize: MainAxisSize.min,
         children: [
           ResponsiveContainer(
-            phoneSize: Size(380, 230),
-            tabletSize: Size(750, 350),
-            desktopSize: Size(750, 370),
+            phoneSize: const Size(380, 230),
+            tabletSize: const Size(750, 350),
+            desktopSize: const Size(750, 370),
             child: Center(
               child: PageView.builder(
                 // physics: NeverScrollableScrollPhysics(),
@@ -64,7 +64,7 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -77,7 +77,7 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
                   //       .onPreviousPressed(_controller.page!.toInt());
                   // }
                   _controller.previousPage(
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn);
                 },
                 icon: Image.asset(
@@ -88,7 +88,7 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 25,
               ),
               IconButton(
@@ -97,7 +97,7 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
                   //   _carShowcaseCubit.onNextPressed(_controller.page!.toInt());
                   // }
                   _controller.nextPage(
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn);
                 },
                 icon: Image.asset(

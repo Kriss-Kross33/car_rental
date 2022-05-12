@@ -8,7 +8,7 @@ class PhoneMainWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        BodyWidget(),
+        const BodyWidget(),
         // Row(
         //   mainAxisSize: MainAxisSize.min,
         //   children: [
@@ -23,7 +23,7 @@ class PhoneMainWidget extends StatelessWidget {
             left: 20,
           ),
           child: IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },

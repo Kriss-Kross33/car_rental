@@ -6,6 +6,6 @@ class DesktopBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomIndexedStackedWidget();
+    return const CustomIndexedStackedWidget();
   }
 }

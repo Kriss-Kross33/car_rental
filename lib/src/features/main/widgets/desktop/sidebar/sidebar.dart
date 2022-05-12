@@ -41,7 +41,7 @@ class _SideBarState extends State<SideBar> {
       itemCount: menuItems.length,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           child: GestureDetector(
             onTap: () {
               _navItemCubit.onNavItemSelected(index);

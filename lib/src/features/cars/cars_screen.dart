@@ -10,7 +10,7 @@ class CarsScreenWidget extends StatelessWidget {
     return ResponsiveLayout(
       phone: Container(),
       tablet: Container(),
-      desktop: CarsDesktop(),
+      desktop: const CarsDesktop(),
     );
   }
 }

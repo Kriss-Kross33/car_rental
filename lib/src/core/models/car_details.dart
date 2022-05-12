@@ -7,7 +7,7 @@ class CarDetailsModel extends Equatable {
   final String name;
   final CarSpecs specs;
 
-  CarDetailsModel(
+  const CarDetailsModel(
       {required this.imagePath, required this.name, required this.specs});
   @override
   List<Object?> get props => [];
@@ -23,7 +23,7 @@ class CarSpecs extends Equatable {
   final GearBox gearBox;
   final String acceleration;
 
-  CarSpecs({
+  const CarSpecs({
     required this.engine,
     required this.year,
     required this.doors,
@@ -52,7 +52,7 @@ enum FuelType {
   Diesel,
 }
 
-final List<CarDetailsModel> carDetails = <CarDetailsModel>[
+const List<CarDetailsModel> carDetails = <CarDetailsModel>[
   CarDetailsModel(
     imagePath: AssetConsts.benz_2,
     name: CarConst.benz_2,
