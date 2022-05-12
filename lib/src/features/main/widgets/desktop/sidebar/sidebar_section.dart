@@ -9,15 +9,15 @@ class SidebarSection extends StatelessWidget {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.only(top: 150, bottom: 10),
-        child: Container(
+        child: SizedBox(
           child: Row(
             children: [
-              Flexible(
+              const Flexible(
                 child: SideBar(),
               ),
               Container(
                 color: Theme.of(context).colorScheme.primaryVariant,
-                child: VerticalDivider(
+                child: const VerticalDivider(
                   width: 1,
                 ),
               )

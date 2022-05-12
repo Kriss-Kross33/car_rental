@@ -41,7 +41,7 @@ class CircularImageStack extends StatelessWidget {
         borderRadius: BorderRadius.circular(size / 2),
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               height: size,
               width: size,
               child: Image.asset(

@@ -17,7 +17,7 @@ class CustomIndexedStackedWidget extends StatefulWidget {
 
 class _CustomIndexedStackedWidgetState
     extends State<CustomIndexedStackedWidget> {
-  NavItemCubit _navItemCubit = locator<NavItemCubit>();
+  final _navItemCubit = locator<NavItemCubit>();
 
   @override
   void initState() {
@@ -30,11 +30,10 @@ class _CustomIndexedStackedWidgetState
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return BlocListener<NavItemCubit, NavItemState>(
-      listener: (context, state) {
-        print('CURRENT INDEX ${state.currentIndex}');
-      },
+      listener: (context, state) {},
       child: BlocBuilder<NavItemCubit, NavItemState>(
         builder: (context, state) {
           return IndexedStack(

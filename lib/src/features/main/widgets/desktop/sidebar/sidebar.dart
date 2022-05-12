@@ -22,7 +22,7 @@ class _SideBarState extends State<SideBar> {
     AppConst.contact,
   ];
 
-  NavItemCubit _navItemCubit = locator<NavItemCubit>();
+  final _navItemCubit = locator<NavItemCubit>();
 
   @override
   void initState() {

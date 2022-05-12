@@ -60,7 +60,7 @@ class CarsDesktop extends StatelessWidget {
                               ),
                         ),
                       ),
-                      Container(
+                      const SizedBox(
                         height: 70,
                         child: VerticalDivider(
                           width: 1,
@@ -76,7 +76,7 @@ class CarsDesktop extends StatelessWidget {
                                   ),
                         ),
                       ),
-                      Container(
+                      const SizedBox(
                         height: 70,
                         child: VerticalDivider(
                           width: 1,

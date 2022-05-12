@@ -1,4 +1,3 @@
-import 'package:car_rental/src/core/themes/theme.dart';
 import 'package:car_rental/src/features/contact/common/widgets.dart';
 import 'package:car_rental/src/features/contact/models/contact_model.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,7 @@ class ContactListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
+      child: SizedBox(
         height: 500,
         child: ListView.separated(
           itemCount: contacts.length + 2,
