@@ -16,4 +16,5 @@ class AssetConsts {
   static const String bmw_x2 = _assetPath + 'bmw_x2.png';
   static const String left_arrow = _assetPath + 'left_arrow.png';
   static const String right_arrow = _assetPath + 'right_arrow.png';
+  static const String top_arrow = _assetPath + 'top_arrow.png';
 }

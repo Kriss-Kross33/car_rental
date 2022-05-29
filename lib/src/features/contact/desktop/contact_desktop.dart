@@ -25,21 +25,35 @@ class ContactDesktop extends StatelessWidget {
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
-                    HeaderWidget(
+                  children: <Widget>[
+                    const HeaderWidget(
                       text: AppConst.contact,
                       fontSize: 50,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    OrangeDivider(
+                    const OrangeDivider(
                       width: 60,
                     ),
-                    SizedBox(
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Text(
+                      AppConst.ourPoints,
+                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                            fontWeight: FontWeight.w500,
+                          ),
+                    ),
+                    const SizedBox(
                       height: 20,
                     ),
-                    ContactListWidget()
+                    Divider(
+                      height: 1,
+                      thickness: 1.3,
+                      color: Theme.of(context).colorScheme.primaryVariant,
+                    ),
+                    const ContactListWidget()
                   ],
                 ),
               ],

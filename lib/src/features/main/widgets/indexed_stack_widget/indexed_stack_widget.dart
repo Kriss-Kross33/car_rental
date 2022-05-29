@@ -42,13 +42,13 @@ class _CustomIndexedStackedWidgetState
               HomeWidget(),
               AboutUsWidget(),
               CarsScreenWidget(),
-              ContactScreen(),
               SizedBox(
                 child: Text('4'),
               ),
               SizedBox(
                 child: Text('5'),
               ),
+              ContactScreen(),
             ],
           );
         },

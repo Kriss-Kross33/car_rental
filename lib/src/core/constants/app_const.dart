@@ -26,4 +26,5 @@ class AppConst {
   static const String satSun = 'Sat - Sun';
   static const String mail = 'Mail:';
   static const String phone = 'Phone:';
+  static const String ourPoints = 'Our Points:';
 }
