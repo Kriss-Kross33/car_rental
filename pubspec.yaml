@@ -20,6 +20,8 @@ dependencies:
   flutter_bloc: ^7.3.1
   equatable: ^2.0.3
   get_it: ^7.2.0
+  pluto_grid: 2.10.3
+  responsive_table: ^0.2.0+2
 
 dev_dependencies:
   flutter_test:
