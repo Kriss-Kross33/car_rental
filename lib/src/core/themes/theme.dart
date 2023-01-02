@@ -198,9 +198,10 @@ class AppTheme {
 
 class AppColor {
   const AppColor._();
-
   static const Color white = Colors.white;
   static const Color black = Colors.black;
   static const Color imageBgColor = Color(0xFF61B0D4);
   static const Color deepOrange = Color(0xFFF73F1C);
+  static const Color grey = Color(0xFFE1E4E8);
+  static const Color lightBlue = Color(0xFFE7F0F9);
 }
