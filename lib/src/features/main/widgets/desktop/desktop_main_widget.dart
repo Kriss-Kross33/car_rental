@@ -7,11 +7,11 @@ class DesktopMainWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return const Stack(
       children: [
         Row(
           mainAxisSize: MainAxisSize.min,
-          children: const [
+          children: [
             SidebarSection(),
             Expanded(
               child: BodyWidget(),
@@ -19,7 +19,7 @@ class DesktopMainWidget extends StatelessWidget {
             ),
           ],
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.only(left: 50, top: 30),
           child: PhoneNumberWidget(),
         ),
