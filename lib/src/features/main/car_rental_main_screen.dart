@@ -8,8 +8,9 @@ class CarRentalMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer:
-          ResponsiveLayout.isDesktop(context) ? null : const NavigationDrawer(),
+      drawer: ResponsiveLayout.isDesktop(context)
+          ? null
+          : const CustomNavigationDrawer(),
       body: ResponsiveLayout(
         phone: const PhoneMainWidget(),
         tablet: Container(),
