@@ -20,7 +20,7 @@ class ContactItem extends StatelessWidget {
       trailing: const SizedBox.shrink(),
       title: Text(
         contact.location,
-        style: Theme.of(context).textTheme.subtitle2?.copyWith(
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(
               fontWeight: FontWeight.w600,
             ),
       ),
@@ -33,7 +33,7 @@ class ContactItem extends StatelessWidget {
                 child: Divider(
                   height: 0,
                   thickness: 1.3,
-                  color: Theme.of(context).colorScheme.primaryVariant,
+                  color: Theme.of(context).colorScheme.primaryContainer,
                 ),
               ),
             ),
@@ -62,7 +62,7 @@ class ContactItem extends StatelessWidget {
                     children: [
                       Text(
                         AppConst.openingHours,
-                        style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
                               fontWeight: FontWeight.w700,
                             ),
                       ),
@@ -109,7 +109,7 @@ class ContactItem extends StatelessWidget {
                     children: [
                       Text(
                         AppConst.info,
-                        style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
                               fontWeight: FontWeight.w700,
                             ),
                       ),

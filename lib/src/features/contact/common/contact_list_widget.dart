@@ -23,7 +23,7 @@ class ContactListWidget extends StatelessWidget {
               child: Divider(
                 height: 0,
                 thickness: 1.3,
-                color: Theme.of(context).colorScheme.primaryVariant,
+                color: Theme.of(context).colorScheme.primaryContainer,
               ),
             );
           },

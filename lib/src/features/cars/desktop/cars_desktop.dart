@@ -23,9 +23,9 @@ class CarsDesktop extends StatelessWidget {
             ),
             child: Stack(
               children: [
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
+                  children: <Widget>[
                     HeaderWidget(
                       text: AppConst.cars,
                       fontSize: 50,
@@ -53,7 +53,7 @@ class CarsDesktop extends StatelessWidget {
                           'Information',
                           style: Theme.of(context)
                               .textTheme
-                              .bodyText2
+                              .bodyMedium
                               ?.copyWith(
                                 fontWeight: FontWeight.w500,
                                 color: Theme.of(context).colorScheme.secondary,
@@ -71,7 +71,7 @@ class CarsDesktop extends StatelessWidget {
                         child: Text(
                           'Availability',
                           style:
-                              Theme.of(context).textTheme.bodyText2?.copyWith(
+                              Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -87,7 +87,7 @@ class CarsDesktop extends StatelessWidget {
                         child: Text(
                           'Prices',
                           style:
-                              Theme.of(context).textTheme.bodyText2?.copyWith(
+                              Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -130,7 +130,7 @@ class CarsDesktop extends StatelessWidget {
                                 AppConst.reservations,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline4
+                                    .headlineMedium
                                     ?.copyWith(
                                       fontWeight: FontWeight.w400,
                                       color: AppColor.white,
@@ -154,7 +154,8 @@ class CarsDesktop extends StatelessWidget {
                     //borderRadius: BorderRadius.circular(30),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Theme.of(context).colorScheme.secondaryVariant,
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondaryContainer,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -166,7 +167,10 @@ class CarsDesktop extends StatelessWidget {
                       onPressed: () {},
                       child: Text(
                         AppConst.book_now,
-                        style: Theme.of(context).textTheme.headline4?.copyWith(
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium
+                            ?.copyWith(
                               color: AppColor.white,
                             ),
                       ),

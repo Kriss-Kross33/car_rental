@@ -66,7 +66,8 @@ class _CarWidgetState extends State<CarWidget>
         ),
         Text(
           widget.car.name,
-          style: Theme.of(context).textTheme.headline4?.copyWith(height: 1),
+          style:
+              Theme.of(context).textTheme.headlineMedium?.copyWith(height: 1),
         ),
       ],
     );

@@ -23,9 +23,9 @@ class AboutUsDesktop extends StatelessWidget {
             ),
             child: Stack(
               children: [
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
+                  children: <Widget>[
                     HeaderWidget(
                       text: AppConst.about,
                     ),
@@ -56,7 +56,7 @@ class AboutUsDesktop extends StatelessWidget {
                           'Our Brand',
                           style: Theme.of(context)
                               .textTheme
-                              .bodyText2
+                              .bodyMedium
                               ?.copyWith(
                                 color: Theme.of(context).colorScheme.secondary,
                               ),
@@ -66,16 +66,20 @@ class AboutUsDesktop extends StatelessWidget {
                         onPressed: () {},
                         child: Text(
                           'What\'s new',
-                          style:
-                              Theme.of(context).textTheme.bodyText2?.copyWith(),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(),
                         ),
                       ),
                       TextButton(
                         onPressed: () {},
                         child: Text(
                           'Soon',
-                          style:
-                              Theme.of(context).textTheme.bodyText2?.copyWith(),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(),
                         ),
                       ),
                     ],

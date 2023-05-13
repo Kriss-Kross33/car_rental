@@ -41,7 +41,7 @@ class ContactDesktop extends StatelessWidget {
                     ),
                     Text(
                       AppConst.ourPoints,
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.w500,
                           ),
                     ),
@@ -51,7 +51,7 @@ class ContactDesktop extends StatelessWidget {
                     Divider(
                       height: 1,
                       thickness: 1.3,
-                      color: Theme.of(context).colorScheme.primaryVariant,
+                      color: Theme.of(context).colorScheme.primaryContainer,
                     ),
                     const ContactListWidget()
                   ],

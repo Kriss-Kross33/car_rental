@@ -33,7 +33,7 @@ class NavItem extends StatelessWidget {
                   desktopSize: const Size(60, 15),
                   child: const SizedBox(),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.primaryVariant,
+                    color: Theme.of(context).colorScheme.primaryContainer,
                   ),
                 ),
               )
@@ -51,7 +51,7 @@ class NavItem extends StatelessWidget {
               ),
         title: Text(
           title,
-          style: Theme.of(context).textTheme.subtitle1?.copyWith(
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
               ),
         ),

@@ -16,7 +16,7 @@ class SubHeaderWidget extends StatelessWidget {
     return ResponsiveLayout(
       phone: Text(
         text,
-        style: Theme.of(context).textTheme.headline3?.copyWith(
+        style: Theme.of(context).textTheme.displaySmall?.copyWith(
               wordSpacing: 3,
               fontSize: fontSize ?? 36,
               height: 1,
@@ -26,7 +26,7 @@ class SubHeaderWidget extends StatelessWidget {
       ),
       tablet: Text(
         text,
-        style: Theme.of(context).textTheme.headline3?.copyWith(
+        style: Theme.of(context).textTheme.displaySmall?.copyWith(
               wordSpacing: 3,
               fontSize: fontSize ?? 36,
               height: 1,
@@ -36,7 +36,7 @@ class SubHeaderWidget extends StatelessWidget {
       ),
       desktop: Text(
         text,
-        style: Theme.of(context).textTheme.headline3?.copyWith(
+        style: Theme.of(context).textTheme.displaySmall?.copyWith(
               wordSpacing: 3,
               fontSize: fontSize ?? 36,
               height: 1,

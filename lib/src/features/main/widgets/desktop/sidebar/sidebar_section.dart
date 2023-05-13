@@ -16,7 +16,7 @@ class SidebarSection extends StatelessWidget {
                 child: SideBar(),
               ),
               Container(
-                color: Theme.of(context).colorScheme.primaryVariant,
+                color: Theme.of(context).colorScheme.primaryContainer,
                 child: const VerticalDivider(
                   width: 1,
                 ),

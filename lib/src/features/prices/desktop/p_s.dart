@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/core.dart';
-import '../../../core/widgets/widgets.dart';
 import '../common/price_switcher_widget.dart';
 import '../common/prices_table.dart';
 
@@ -34,9 +33,9 @@ class PricesDesktop extends StatelessWidget {
                   ),
                   child: Stack(
                     children: [
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const <Widget>[
+                        children: <Widget>[
                           HeaderWidget(
                             text: AppConst.prices,
                             fontSize: 50,
@@ -69,7 +68,7 @@ class PricesDesktop extends StatelessWidget {
                                 'Individual Offer',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .bodyText1
+                                    .bodyLarge
                                     ?.copyWith(
                                       color: AppColor.white,
                                       fontSize: 16,
@@ -77,7 +76,7 @@ class PricesDesktop extends StatelessWidget {
                               ),
                               style: ElevatedButton.styleFrom(
                                 elevation: 1.0,
-                                primary: AppColor.deepOrange,
+                                backgroundColor: AppColor.deepOrange,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),

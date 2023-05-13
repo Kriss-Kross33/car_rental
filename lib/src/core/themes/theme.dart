@@ -20,10 +20,8 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     colorScheme: const ColorScheme.light(
       primary: whitePrimaryColor,
-      primaryVariant: whitePrimaryVariant,
       onPrimary: whiteOnPrimaryColor,
       secondary: whiteSecondaryColor,
-      secondaryVariant: whiteSecondaryVariant,
       onSecondary: whiteOnSecondaryColor,
     ),
     iconTheme: _iconTheme,
@@ -86,16 +84,16 @@ class AppTheme {
 
   //* Light Text Theme
   static const TextTheme _lightTextTheme = TextTheme(
-    headline3: _lightHeadline3,
-    headline4: _lightHeadline4,
-    headline5: _lightHeadline5,
-    headline6: _lightHeadline6,
-    subtitle1: _lightSubtitle1,
-    subtitle2: _lightSubtitle2,
-    bodyText2: _lightBodyText2,
-    bodyText1: _lightBodyText1,
-    button: _lightButtonText,
-    caption: _lightCaptionText,
+    displaySmall: _lightHeadline3,
+    headlineMedium: _lightHeadline4,
+    headlineSmall: _lightHeadline5,
+    titleLarge: _lightHeadline6,
+    titleMedium: _lightSubtitle1,
+    titleSmall: _lightSubtitle2,
+    bodyMedium: _lightBodyText2,
+    bodyLarge: _lightBodyText1,
+    labelLarge: _lightButtonText,
+    bodySmall: _lightCaptionText,
   );
 
   //* Dark Theme
@@ -112,10 +110,8 @@ class AppTheme {
     scaffoldBackgroundColor: darkPrimaryColor,
     colorScheme: const ColorScheme.dark(
       primary: darkPrimaryColor,
-      primaryVariant: darkPrimaryVariant,
       onPrimary: darkOnPrimaryColor,
       secondary: darkSecondaryColor,
-      secondaryVariant: darkSecondaryVariant,
       onSecondary: darkOnSecondaryColor,
     ),
     iconTheme: _iconTheme,
@@ -168,16 +164,16 @@ class AppTheme {
 
 //* Dark Text Theme
   static const TextTheme _darkTextTheme = TextTheme(
-    headline3: _darkHeadline3,
-    headline4: _darkHeadline4,
-    headline5: _darkHeadline5,
-    headline6: _darkHeadline6,
-    subtitle1: _darkSubtitle1,
-    subtitle2: _darkSubtitle2,
-    bodyText2: _darkBodyText2,
-    bodyText1: _darkBodyText1,
-    button: _darkButtonText,
-    caption: _darkCaptionText,
+    displaySmall: _darkHeadline3,
+    headlineMedium: _darkHeadline4,
+    headlineSmall: _darkHeadline5,
+    titleLarge: _darkHeadline6,
+    titleMedium: _darkSubtitle1,
+    titleSmall: _darkSubtitle2,
+    bodyMedium: _darkBodyText2,
+    bodyLarge: _darkBodyText1,
+    labelLarge: _darkButtonText,
+    bodySmall: _darkCaptionText,
   );
 
   //* Icon Theme

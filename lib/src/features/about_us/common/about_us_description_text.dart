@@ -8,7 +8,7 @@ class AboutUsDescriptionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       AppConst.aboutUsDescription,
-      style: Theme.of(context).textTheme.bodyText2?.copyWith(
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
             height: 2,
           ),
     );

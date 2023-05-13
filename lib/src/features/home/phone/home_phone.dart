@@ -29,22 +29,26 @@ class HomePhone extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           AppConst.rentACar,
-                          style:
-                              Theme.of(context).textTheme.headline3?.copyWith(
-                                    wordSpacing: 3,
-                                    fontSize: 40,
-                                    height: 1,
-                                    letterSpacing: 1,
-                                  ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .displaySmall
+                              ?.copyWith(
+                                wordSpacing: 3,
+                                fontSize: 40,
+                                height: 1,
+                                letterSpacing: 1,
+                              ),
                         ),
                         Text(
                           AppConst.fromPrice,
-                          style:
-                              Theme.of(context).textTheme.headline3?.copyWith(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 30,
-                                    height: 1,
-                                  ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .displaySmall
+                              ?.copyWith(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 30,
+                                height: 1,
+                              ),
                         ),
                         const SizedBox(
                           height: 20,

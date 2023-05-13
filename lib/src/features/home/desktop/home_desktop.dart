@@ -63,7 +63,7 @@ class HomeDesktop extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     AppConst.rentACar,
-                    style: Theme.of(context).textTheme.headline3?.copyWith(
+                    style: Theme.of(context).textTheme.displaySmall?.copyWith(
                           wordSpacing: 3,
                           fontSize: 80,
                           height: 1,
@@ -72,7 +72,7 @@ class HomeDesktop extends StatelessWidget {
                   ),
                   Text(
                     AppConst.fromPrice,
-                    style: Theme.of(context).textTheme.headline3?.copyWith(
+                    style: Theme.of(context).textTheme.displaySmall?.copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: 60,
                           height: 1,

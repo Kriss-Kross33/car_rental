@@ -24,7 +24,7 @@ class PhoneNumberWidget extends StatelessWidget {
             AppConst.phoneNumber,
             style: Theme.of(context)
                 .textTheme
-                .headline6
+                .titleLarge
                 ?.copyWith(fontWeight: FontWeight.w600),
           )
         ],
