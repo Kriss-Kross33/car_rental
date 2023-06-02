@@ -90,10 +90,18 @@ class _PricesTableState extends State<PricesTable> {
           DataCell(
             SizedBox(
               width: 150,
-              height: 80,
-              child: Image.asset(
-                AssetConsts.rolls_royce,
-                fit: BoxFit.fill,
+              height: 120,
+              child: Column(
+                children: [
+                  Image.asset(
+                    AssetConsts.rolls_royce,
+                    fit: BoxFit.fill,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Text('Rolls Royce'),
+                ],
               ),
             ),
           ),
@@ -116,10 +124,18 @@ class _PricesTableState extends State<PricesTable> {
           DataCell(
             SizedBox(
               width: 150,
-              height: 80,
-              child: Image.asset(
-                AssetConsts.bmw_i8,
-                fit: BoxFit.fill,
+              height: 120,
+              child: Column(
+                children: [
+                  Image.asset(
+                    AssetConsts.bmw_i8,
+                    fit: BoxFit.fill,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Text('BMW I8'),
+                ],
               ),
             ),
           ),
@@ -144,10 +160,18 @@ class _PricesTableState extends State<PricesTable> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
                 width: 150,
-                height: 80,
-                child: Image.asset(
-                  AssetConsts.benz_2,
-                  fit: BoxFit.fill,
+                height: 120,
+                child: Column(
+                  children: [
+                    Image.asset(
+                      AssetConsts.benz_2,
+                      fit: BoxFit.fill,
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const Text('Benz2'),
+                  ],
                 ),
               ),
             ),
