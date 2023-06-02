@@ -1,5 +1,3 @@
-import 'package:car_rental/src/core/constants/asset_consts.dart';
-import 'package:car_rental/src/core/constants/car_const.dart';
 import 'package:equatable/equatable.dart';
 
 class CarDetailsModel extends Equatable {
@@ -14,7 +12,7 @@ class CarDetailsModel extends Equatable {
 }
 
 class CarSpecs extends Equatable {
-  final int engine;
+  final String engine;
   final int year;
   final int doors;
   final DriveType driveType;
@@ -51,104 +49,3 @@ enum FuelType {
   Gasoline,
   Diesel,
 }
-
-const List<CarDetailsModel> carDetails = <CarDetailsModel>[
-  CarDetailsModel(
-    imagePath: AssetConsts.benz_2,
-    name: CarConst.benz_2,
-    specs: CarSpecs(
-      engine: 4200,
-      year: 2015,
-      doors: 2,
-      driveType: DriveType.RWD,
-      fuelType: FuelType.Gasoline,
-      power: 395,
-      gearBox: GearBox.Manual,
-      acceleration: '3,7s',
-    ),
-  ),
-  CarDetailsModel(
-    imagePath: AssetConsts.audi_r8_spyder,
-    name: CarConst.benz_gt_s,
-    specs: CarSpecs(
-      engine: 4200,
-      year: 2015,
-      doors: 2,
-      driveType: DriveType.RWD,
-      fuelType: FuelType.Gasoline,
-      power: 395,
-      gearBox: GearBox.Manual,
-      acceleration: '3,7s',
-    ),
-  ),
-  CarDetailsModel(
-    imagePath: AssetConsts.benz_2,
-    name: CarConst.benz_gt_s,
-    specs: CarSpecs(
-      engine: 4200,
-      year: 2015,
-      doors: 2,
-      driveType: DriveType.RWD,
-      fuelType: FuelType.Gasoline,
-      power: 395,
-      gearBox: GearBox.Manual,
-      acceleration: '3,7s',
-    ),
-  ),
-  CarDetailsModel(
-    imagePath: AssetConsts.benz_gt_s,
-    name: CarConst.benz_gt_s,
-    specs: CarSpecs(
-      engine: 4200,
-      year: 2015,
-      doors: 2,
-      driveType: DriveType.RWD,
-      fuelType: FuelType.Gasoline,
-      power: 395,
-      gearBox: GearBox.Manual,
-      acceleration: '3,7s',
-    ),
-  ),
-  CarDetailsModel(
-    imagePath: AssetConsts.benz_gt_s,
-    name: CarConst.benz_gt_s,
-    specs: CarSpecs(
-      engine: 4200,
-      year: 2015,
-      doors: 2,
-      driveType: DriveType.RWD,
-      fuelType: FuelType.Gasoline,
-      power: 395,
-      gearBox: GearBox.Manual,
-      acceleration: '3,7s',
-    ),
-  ),
-  CarDetailsModel(
-    imagePath: AssetConsts.benz_gt_s,
-    name: CarConst.benz_gt_s,
-    specs: CarSpecs(
-      engine: 4200,
-      year: 2015,
-      doors: 2,
-      driveType: DriveType.RWD,
-      fuelType: FuelType.Gasoline,
-      power: 395,
-      gearBox: GearBox.Manual,
-      acceleration: '3,7s',
-    ),
-  ),
-  CarDetailsModel(
-    imagePath: AssetConsts.benz_gt_s,
-    name: CarConst.benz_gt_s,
-    specs: CarSpecs(
-      engine: 4200,
-      year: 2015,
-      doors: 2,
-      driveType: DriveType.RWD,
-      fuelType: FuelType.Gasoline,
-      power: 395,
-      gearBox: GearBox.Manual,
-      acceleration: '3,7s',
-    ),
-  ),
-];
