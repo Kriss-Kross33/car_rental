@@ -19,7 +19,7 @@ class CarsDesktop extends StatelessWidget {
               top: 50,
               left: 100,
               right: 100,
-              bottom: 50,
+              bottom: 30,
             ),
             child: Stack(
               children: [
@@ -61,7 +61,7 @@ class CarsDesktop extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 70,
+                        height: 60,
                         child: VerticalDivider(
                           width: 1,
                         ),
@@ -77,7 +77,7 @@ class CarsDesktop extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 70,
+                        height: 60,
                         child: VerticalDivider(
                           width: 1,
                         ),
@@ -118,29 +118,66 @@ class CarsDesktop extends StatelessWidget {
                           fit: BoxFit.cover,
                           height: MediaQuery.of(context).size.height,
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const SizedBox(
-                              height: 52,
+                        LayoutBuilder(builder: (context, constraints) {
+                          return Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: constraints.maxWidth * 0.12),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(
+                                  height: 52,
+                                ),
+                                Align(
+                                  alignment: Alignment.topCenter,
+                                  child: Text(
+                                    AppConst.reservations,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                          fontWeight: FontWeight.w400,
+                                          color: AppColor.white,
+                                          fontSize: 34,
+                                          letterSpacing: 1.3,
+                                        ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 50,
+                                ),
+                                const ReservationTextField(
+                                  label: 'While',
+                                  suffixIcon: Icon(
+                                    Icons.calendar_month_outlined,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const ReservationTextField(
+                                  label: 'Till',
+                                  suffixIcon: Icon(
+                                    Icons.calendar_month_outlined,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const ReservationTextField(
+                                  label: 'At',
+                                  suffixIcon: Icon(
+                                    Icons.alarm_outlined,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const ReservationTextField(
+                                  label: 'Location',
+                                  suffixIcon: Icon(
+                                    Icons.location_on_outlined,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Align(
-                              alignment: Alignment.topCenter,
-                              child: Text(
-                                AppConst.reservations,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headlineMedium
-                                    ?.copyWith(
-                                      fontWeight: FontWeight.w400,
-                                      color: AppColor.white,
-                                      fontSize: 34,
-                                      letterSpacing: 1.3,
-                                    ),
-                              ),
-                            )
-                          ],
-                        ),
+                          );
+                        }),
                       ],
                     ),
                   ),
@@ -154,8 +191,7 @@ class CarsDesktop extends StatelessWidget {
                     //borderRadius: BorderRadius.circular(30),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Theme.of(context).colorScheme.secondaryContainer,
+                        backgroundColor: AppColor.deepOrange,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),

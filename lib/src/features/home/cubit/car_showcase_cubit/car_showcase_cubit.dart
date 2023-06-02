@@ -1,16 +1,14 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
+import '../../../../core/models/models.dart';
+
 part 'car_showcase_state.dart';
 
 class CarShowcaseCubit extends Cubit<CarShowcaseState> {
-  CarShowcaseCubit() : super(CarShowcaseInitial());
+  CarShowcaseCubit() : super(const CarShowcaseState());
 
-  void onPreviousPressed(int index) {
-    emit(CarShowcaseChangedState(currentIndex: index));
-  }
-
-  void onNextPressed(int index) {
-    emit(CarShowcaseChangedState(currentIndex: index));
+  void onPageChanged(int index, CarModel car) {
+    emit(CarShowcaseChangedState(currentIndex: index, car: car));
   }
 }

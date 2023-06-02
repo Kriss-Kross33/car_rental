@@ -59,7 +59,7 @@ class _CarPageViewWidgetState extends State<CarPageViewWidget> {
                       .toList()[index];
                 },
                 onPageChanged: (int index) {
-                  _carShowcaseCubit.onPreviousPressed(index);
+                  _carShowcaseCubit.onPageChanged(index, carModels[index]);
                 },
               ),
             ),
