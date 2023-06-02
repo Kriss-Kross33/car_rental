@@ -1,9 +1,9 @@
-import 'package:car_rental/src/core/constants/asset_consts.dart';
-import 'package:car_rental/src/core/models/car_details.dart';
+import 'package:car_rental/src/core/core.dart';
 import 'package:car_rental/src/core/service_locator/service_locator.dart';
 import 'package:car_rental/src/features/cars/common/car_details.dart';
 import 'package:car_rental/src/features/home/cubit/car_showcase_cubit/car_showcase_cubit.dart';
 import 'package:car_rental/src/responsive_layout.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,6 +23,7 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
   void initState() {
     super.initState();
     _controller = PageController();
+    _carShowcaseCubit.onPageChanged(0, carModels[0]);
   }
 
   @override
@@ -48,9 +49,9 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
                 // physics: NeverScrollableScrollPhysics(),
                 pageSnapping: true,
                 controller: _controller,
-                itemCount: carDetails.length,
+                itemCount: carModels.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return carDetails
+                  return carModels
                       .map((car) => CarDetailsWidet(
                             car: car,
                             index: index,
@@ -59,7 +60,7 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
                       .toList()[index];
                 },
                 onPageChanged: (int index) {
-                  _carShowcaseCubit.onPreviousPressed(index);
+                  _carShowcaseCubit.onPageChanged(index, carModels[index]);
                 },
               ),
             ),
@@ -68,7 +69,6 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
             height: 10,
           ),
           Row(
-            mainAxisSize: MainAxisSize.min,
             children: [
               IconButton(
                 onPressed: () {
@@ -88,17 +88,28 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
-              const SizedBox(
-                width: 25,
+              const Spacer(),
+              BlocBuilder<CarShowcaseCubit, CarShowcaseState>(
+                builder: (context, state) {
+                  if (state is CarShowcaseChangedState) {
+                    return Text(
+                      state.car.name,
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    );
+                  }
+                  return const SizedBox.shrink();
+                },
               ),
+              const Spacer(),
               IconButton(
                 onPressed: () {
                   // if (_controller.page != carModels.length) {
                   //   _carShowcaseCubit.onNextPressed(_controller.page!.toInt());
                   // }
                   _controller.nextPage(
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.easeIn);
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
                 },
                 icon: Image.asset(
                   AssetConsts.right_arrow,
@@ -109,7 +120,135 @@ class _CarDetailsPageViewState extends State<CarDetailsPageView> {
                 ),
               ),
             ],
-          )
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          BlocBuilder<CarShowcaseCubit, CarShowcaseState>(
+            builder: (context, state) {
+              if (state is CarShowcaseChangedState) {
+                final carDetail = state.car.details.specs;
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Engine:'),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text('Year:'),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text('Doors:'),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text('Drive Type:'),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          carDetail.engine,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          carDetail.year.toString(),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          carDetail.doors.toString(),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          describeEnum(carDetail.driveType),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Fuel Type:'),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text('Power:'),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text('Gearbox:'),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text('Acceleration:'),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          describeEnum(carDetail.fuelType),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          carDetail.power.toString(),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          describeEnum(carDetail.gearBox),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          carDetail.acceleration,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                );
+              }
+              return const SizedBox.shrink();
+            },
+          ),
         ],
       ),
     );
