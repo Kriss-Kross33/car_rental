@@ -7,6 +7,8 @@ import 'package:car_rental/src/features/main/cubit/nav_item_cubit/nav_item_cubit
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../prices/prices_screen.dart';
+
 class CustomIndexedStackedWidget extends StatefulWidget {
   const CustomIndexedStackedWidget({Key? key}) : super(key: key);
 
@@ -45,9 +47,7 @@ class _CustomIndexedStackedWidgetState
               SizedBox(
                 child: Text('4'),
               ),
-              SizedBox(
-                child: Text('5'),
-              ),
+              PricesScreen(),
               ContactScreen(),
             ],
           );
