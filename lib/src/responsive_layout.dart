@@ -5,8 +5,8 @@ class ResponsiveLayout extends StatelessWidget {
   final Widget tablet;
   final Widget desktop;
 
-  static const int phoneLimit = 650;
-  static const int tabletLimit = 1100;
+  static const int phoneLimit = 450;
+  static const int tabletLimit = 800;
 
   const ResponsiveLayout({
     Key? key,
