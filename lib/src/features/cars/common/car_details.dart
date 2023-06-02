@@ -1,9 +1,10 @@
-import 'package:car_rental/src/core/models/car_details.dart';
 import 'package:car_rental/src/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/models/models.dart';
+
 class CarDetailsWidet extends StatelessWidget {
-  final CarDetailsModel car;
+  final CarModel car;
   final PageController controller;
   final int index;
   const CarDetailsWidet({
@@ -19,9 +20,9 @@ class CarDetailsWidet extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         ResponsiveContainer(
-          phoneSize: const Size(300, 170),
+          phoneSize: const Size(100, 170),
           tabletSize: const Size(650, 300),
-          desktopSize: const Size(750, 330),
+          desktopSize: const Size(850, 400),
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
