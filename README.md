@@ -10,7 +10,7 @@ A new Flutter project.
  
 
 ![](./readme_files/home.png) | ![](./readme_files/about.png) |
-Cars Screen | Prices Cast | Movie Trailers | Nav Drawer |
 ![](./readme_files/cars.png) |
+![](./readme_files/prices.png) |
 ![](./readme_files/contact.png) 
 
