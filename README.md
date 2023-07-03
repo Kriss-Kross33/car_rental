@@ -8,8 +8,7 @@ A new Flutter project.
 
 ## Screens
  
-Home Screen | About Screen | 
-:--------------:|:--------------:|:---------------:|:---------------:|
+
 ![](./readme_files/home.png) | ![](./readme_files/about.png) |
 Cars Screen | Prices Cast | Movie Trailers | Nav Drawer |
 ![](./readme_files/cars.png) |
