@@ -1,7 +1,8 @@
 # car_rental
 
-A new Flutter project.
+A car rental app built with flutter.
 
+Design inspiration: https://www.behance.net/gallery/57172455/Car-Rental-WEBSITE-Concept
 
 
 ## Demo
